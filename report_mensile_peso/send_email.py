@@ -1,11 +1,5 @@
 # INVIARE EMAIL DA PYTHON
 
-'''
-Riferimento:
-https://realpython.com/python-send-email/#yagmail
-'''
-
-
 # Per impostare email:
 import create_pdf
 import datetime
@@ -21,10 +15,10 @@ from email.mime.text import MIMEText
 
 def config_email(receiver_email, pdf_file):
     port = 465  # For SSL
-    sender_email = "destefano.python@gmail.com"
-    password = "python@fitness"
+    sender_email = "..."
+    password = "..."
     if receiver_email is None:
-        receiver_email = "destefano.mtt@gmail.com"
+        receiver_email = "..."
 
     with open('report_statistics.pickle', 'rb') as f:
         w_stats = pickle.load(f)
@@ -85,7 +79,7 @@ def main():
         print(f'{pdf_file} created.')
 
     # Create and send email
-    receiver_email = "destefano.mtt@gmail.com"
+    receiver_email = "..."
     config_email(receiver_email, pdf_file)
     print(f'E-mail sent to {receiver_email}.')
 
