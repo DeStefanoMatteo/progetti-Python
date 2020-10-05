@@ -2,11 +2,6 @@
 
 # GET DATA FROM GOOGLE SHEETS
 
-'''
-ID sheet:
-12_WHTZ9DVoOPvJHoPObgzWldIxfdm_xu4QWoDiIP_64
-'''
-
 import ezsheets
 import os
 import os.path
@@ -19,7 +14,7 @@ CSV_NAME = f'weight_data_{DATE_CODE}.csv'
         
 
 def download_data():
-    ss = ezsheets.Spreadsheet('12_WHTZ9DVoOPvJHoPObgzWldIxfdm_xu4QWoDiIP_64')
+    ss = ezsheets.Spreadsheet('...')
     sheet = ss[0]
     rows = sheet.getRows()
     for i, row in enumerate(rows):
